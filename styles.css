@@ -1,0 +1,122 @@
+body{
+    display: flex;
+    height: 100vh;
+    background-color:#000000;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.calculator{  
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(50, 49, 49);
+    z-index: 2;
+}
+#display{
+    border: none;
+   text-align: end;
+    border-radius: 10px;
+    align-self: center;
+    padding: 30px 16px;
+    width: 100%;
+    background-color: #444b4d; color: white;
+    font-size: 18px;
+    padding-left: auto;
+}
+.button{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    padding: 5px;
+}
+.btn{
+    border: none;
+    background-color: #4e5972;
+    padding: 16px 20px;
+    font-size: 24px;
+    border-radius: 50%;
+    color: rgb(246, 227, 227);
+    
+    
+    
+}
+.btn-1{
+    background-color: #3f8592;
+ /* box-shadow: 0px 0px 18px rgba(255, 255, 255,0.4); */
+}
+.btn-c{
+    background-color: rgb(139, 11, 129);
+}
+.btn-equal{
+    background-color: #293e6d;
+}
+.btn:hover{
+    filter: brightness(150%);
+    
+}
+.btn:active{
+    box-shadow: 0px 0px 18px rgba(255, 255, 255,0.4);
+}
+
+
+.sun{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 15%;
+    top: 2%;
+    transform: rotateZ(72deg);
+    animation: rotate 10s infinite;
+    z-index: 5;
+}
+.cloud{
+    position: absolute;
+    z-index: 3;
+    top:33%;
+    animation: float 2s infinite;
+
+}
+.cloud-1{
+    right: 5%;
+}
+.cloud-2{
+    left: 5%;
+    animation-delay: 0.5s;
+    transition: all;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes float{
+    0%{
+        transform: translateY(2%);
+    }
+    25%{
+        transform: translateY(-2%);
+    }
+    50%{
+        transform: translateY(2%);
+    }
+    75%{
+        transform: translateY(-2%);
+    }
+    100%{
+        transform: translateY(2%);
+    }
+}
